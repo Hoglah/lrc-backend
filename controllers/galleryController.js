@@ -19,7 +19,7 @@ const addGallery = async (req, res) => {
 
     const gallery = new galleryModel({
       title: req.body.title,
-      images: result.url,
+      images: result.secure_url,
     });
     await gallery.save();
     // Remove temp file
